@@ -1,6 +1,6 @@
 {
     "name": "lekoala/kaly-contracts",
-    "description": "Stable interfaces shared by Kaly and its packages: task dispatching",
+    "description": "Stable interfaces shared by Kaly and its packages: task dispatching, template rendering",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,7 +12,8 @@
     "keywords": [
         "kaly",
         "contracts",
-        "tasks"
+        "tasks",
+        "view"
     ],
     "require": {
         "php": "^8.3"
@@ -21,11 +22,12 @@
         "phpstan/phpstan": "^2.3"
     },
     "conflict": {
-        "lekoala/kaly": "<0.7"
+        "lekoala/kaly": "<0.9"
     },
     "autoload": {
         "psr-4": {
-            "Kaly\\Task\\": "src/"
+            "Kaly\\Task\\": "src/",
+            "Kaly\\View\\": "src/View/"
         }
     },
     "config": {
