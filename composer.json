@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kaly\\Task\\": "src/",
+            "Kaly\\Task\\": "src/Task/",
             "Kaly\\View\\": "src/View/"
         }
     },
@@ -36,9 +36,11 @@
     "scripts": {
         "test": [
             "@lint",
+            "@contracts",
             "@phpstan"
         ],
         "lint": "find src -name '*.php' -print0 | xargs -0 -n1 php -l",
+        "contracts": "php tests/contracts.php",
         "phpstan": "phpstan analyse src --memory-limit=-1"
     },
     "prefer-stable": true
